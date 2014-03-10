@@ -56,7 +56,8 @@ public class Korekcija {
     }
     
     public void randomGreska() {
-        int i = (int)(Math.random() * 7);
+        int i = (int)(Math.random() * 10);
+        if (i < 7) 
         promeni(i);
     }
     
