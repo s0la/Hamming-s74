@@ -5,7 +5,7 @@ public class Korekcija {
     public int p1;
     public int p2;
     public int p3;
-    int errorPos;
+    int errorPos = 0;
     
     public Korekcija(int[] data) {
         this.data = data; 
@@ -87,6 +87,8 @@ public class Korekcija {
     }
     
     public void koriguj() {
+        if (errorPos != 0) {
         promeni(errorPos - 1);
+        }
     }
 }
