@@ -12,10 +12,12 @@ public class Korekcija {
     }
     
     public int parnost(int data1, int data2, int data3) {
-    if((data1 + data2 + data3) %2 == 0) {
-        return 0;
-    } else 
-        return 1;
+        /*if((data1 + data2 + data3) %2 == 0) {
+            return 0;
+        } else {
+            return 1;
+        }*/
+        return ((data1 + data2 + data3) % 2);
     }
     
     public void konstruisi() {
@@ -32,16 +34,24 @@ public class Korekcija {
     }
     
     public void promeni(int index) {
-        if(code[index] == 1) {
+        /* if (code[index] == 1) {
             code[index] = 0;
-        } else 
+        } else {
             code[index] = 1;
+        } */
+        
+        code [index] = 1 - code[index];
     }
     
     public void prikazi() {
-        for (int i = 0; i < code.length; i++) {
+        /*for (int i = 0; i < code.length; i++) {
             System.out.print(code[i] + " ");
+        }*/
+        
+        for (int i : code) {
+            System.out.print(i + " ");
         }
+        
         System.out.println();
     }
     
@@ -82,13 +92,14 @@ public class Korekcija {
         } else if(p1 != gp1 && p2 != gp2 && p3 != gp3) {
             errorPos = 7;
             System.out.println("Pozicija pogresnog bita je " + errorPos);
-        } else
+        } else {
             System.out.println("Nije pronadjena greska u kodu");
+        }
     }
     
     public void koriguj() {
         if (errorPos != 0) {
-        promeni(errorPos - 1);
+            promeni(errorPos - 1);
         }
     }
 }
