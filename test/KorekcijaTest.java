@@ -8,19 +8,21 @@ public class KorekcijaTest {
     public KorekcijaTest() {
     }
     
+    @Test
     public void testParnost() {
     assertEquals(1, Korekcija.parnost(5, 1, 7));
     assertEquals(0, Korekcija.parnost(9, 5, 2));
     assertEquals(0, Korekcija.parnost(11, 3, 2));
     assertEquals(1, Korekcija.parnost(5, 5, 13));
     assertEquals(0, Korekcija.parnost(14, 8, 2));
-    assertEquals(1, Korekcija.parnost(5, 5, 2));
+    assertEquals(0, Korekcija.parnost(5, 5, 2));
     assertEquals(0, Korekcija.parnost(3, 9, 8));
     assertEquals(1, Korekcija.parnost(2, 6, 9));
     assertEquals(1, Korekcija.parnost(5, 8, 22));
     assertEquals(0, Korekcija.parnost(17, 10, 53));
     }
     
+    @Test
     public void testVerifikuj() {
         
         int[] kod1 = {1, 0, 0, 1};
@@ -75,6 +77,8 @@ public class KorekcijaTest {
         test2.promeni(6);
         assertEquals(7, test2.verifikuj());
     }
+    
+    @Test
     public void testKonstruisi() {
         int[] kod1 = {0, 0, 0, 0};
         int[] kod2 = {0, 0, 0, 1};
