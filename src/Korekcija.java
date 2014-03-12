@@ -11,7 +11,7 @@ public class Korekcija {
         this.data = data; 
     }
     
-    public int parnost(int data1, int data2, int data3) {
+    public static int parnost(int data1, int data2, int data3) {
         /*if((data1 + data2 + data3) %2 == 0) {
             return 0;
         } else {
@@ -61,7 +61,7 @@ public class Korekcija {
         promeni(i);
     }
     
-    public void verifikuj() {
+    public int verifikuj() {
         int[] gresni = new int[4];
         gresni[0] = code[1];
         gresni[1] = code[3];
@@ -75,26 +75,34 @@ public class Korekcija {
         if(p1 != code[0]) {
             errorPos = 1;
             System.out.println("Pozicija pogresnog bita je " + errorPos);
+            return errorPos;
         } else if(p2 != code[2]) {
             errorPos = 3;
             System.out.println("Pozicija pogresnog bita je " + errorPos);
+            return errorPos;
         } else if(p3 != code[4]) {
             errorPos = 5;
             System.out.println("Pozicija pogresnog bita je " + errorPos);
+            return errorPos;
         } else if(p1 != gp1 && p2 != gp2 && p3 == gp3) {
             errorPos = 2;
             System.out.println("Pozicija pogresnog bita je " + errorPos);
+            return errorPos;
         } else if(p1 != gp1 && p3 != gp3 && p2 == gp2) {
             errorPos = 4;
             System.out.println("Pozicija pogresnog bita je " + errorPos);
+            return errorPos;
         } else if(p2 != gp2 && p3 != gp3 && p1 == gp1) {
             errorPos = 6;
             System.out.println("Pozicija pogresnog bita je " + errorPos);
+            return errorPos;
         } else if(p1 != gp1 && p2 != gp2 && p3 != gp3) {
             errorPos = 7;
             System.out.println("Pozicija pogresnog bita je " + errorPos);
+            return errorPos;
         } else {
             System.out.println("Nije pronadjena greska u kodu");
+            return errorPos;
         }
     }
     

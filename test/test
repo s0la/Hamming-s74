@@ -1,0 +1,107 @@
+@BeforeClass
+    public static void setUpClass() {
+    }
+    
+    @AfterClass
+    public static void tearDownClass() {
+    }
+    
+    @Before
+    public void setUp() {
+    }
+    
+    @After
+    public void tearDown() {
+    }
+
+    /**
+     * Test of parnost method, of class Korekcija.
+     */
+    @Test
+    public void testParnost() {
+        System.out.println("parnost");
+        int data1 = 0;
+        int data2 = 0;
+        int data3 = 0;
+        Korekcija instance = null;
+        int expResult = 0;
+        int result = instance.parnost(data1, data2, data3);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of konstruisi method, of class Korekcija.
+     */
+    @Test
+    public void testKonstruisi() {
+        System.out.println("konstruisi");
+        Korekcija instance = null;
+        instance.konstruisi();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of promeni method, of class Korekcija.
+     */
+    @Test
+    public void testPromeni() {
+        System.out.println("promeni");
+        int index = 0;
+        Korekcija instance = null;
+        instance.promeni(index);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of prikazi method, of class Korekcija.
+     */
+    @Test
+    public void testPrikazi() {
+        System.out.println("prikazi");
+        Korekcija instance = null;
+        instance.prikazi();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of randomGreska method, of class Korekcija.
+     */
+    @Test
+    public void testRandomGreska() {
+        System.out.println("randomGreska");
+        Korekcija instance = null;
+        instance.randomGreska();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of verifikuj method, of class Korekcija.
+     */
+    @Test
+    public void testVerifikuj() {
+        System.out.println("verifikuj");
+        Korekcija instance = null;
+        instance.verifikuj();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of koriguj method, of class Korekcija.
+     */
+    @Test
+    public void testKoriguj() {
+        System.out.println("koriguj");
+        Korekcija instance = null;
+        instance.koriguj();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+    
+}
